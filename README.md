@@ -17,7 +17,7 @@ just.range(start, end, step)
  	[4,6,8,10,12,14]
 
 
- just.rrange(valuesRange, lengthRange)
+just.rrange(valuesRange, lengthRange)
 ------------------------------
 
  Create array of random length withing given scope with random integer values withing given scope.
@@ -33,7 +33,7 @@ just.range(start, end, step)
  eg. [12, 99, 29, 136, 71, 100]
 
 
- just.orange(template, length)
+just.orange(template, length)
 ------------------------------
 
  Create array of objects base on provided template
@@ -50,3 +50,17 @@ just.range(start, end, step)
 ### returns
 
 	[ { value: 10, name: 'ten'}, { value: 1, name: 'one'}, { value: 2, name: 'two'}]
+
+
+just.arrayShuffle(arr)
+----------------------
+
+ Array shuffle with Fisher-Yates algorithm
+
+### example
+
+	just.arrayShuffle([5, 10, 12]);
+
+### returns
+
+	[10, 5, 15]

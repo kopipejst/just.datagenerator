@@ -8,7 +8,7 @@ var just = just || {};
  * Create array containing arithmetic progressions.
  * If the step argument is omitted, it defaults to 1. 
  * If the start argument is omitted, it defaults to 0. 
- * In case of invalid argument empty arra will be returned.
+ * In case of invalid argument empty array will be returned.
  *
  * @param integer start
  * @param integer end
