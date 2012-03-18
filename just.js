@@ -82,7 +82,7 @@ just.rrange = function(valuesRange, lengthRange){
 };
 
 /**
- * Create array of objects base on provided template
+ * Create array of objects based on provided template
  *
  * @example just.orange( { value: [1,4,5], title: ['title1','title2','title3'] }, 5);
  * @param object template

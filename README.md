@@ -36,7 +36,7 @@ just.rrange(`valuesRange`, `lengthRange`)
 just.orange(`template`, `length`)
 ------------------------------
 
- Create array of objects base on provided template
+ Create array of objects based on provided template
 
 ### example
 
