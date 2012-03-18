@@ -1,4 +1,4 @@
-Collection of usefull JS function
+Collection of useful JS functions
 =================================
 
 just.range(`start`, `end`, `step`)
