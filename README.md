@@ -17,8 +17,8 @@ just.range(start, end, step)
  	[4,6,8,10,12,14]
 
 
- just.rrange (valuesRange, lengthRange)
- ----------------------------------------
+ just.rrange(valuesRange, lengthRange)
+ --------------------------------------
 
  Create array of random length withing given scope with random integer values withing given scope.
  Values of params can be number of array in other case default will be [0,10] for both params
@@ -34,7 +34,7 @@ just.range(start, end, step)
 
 
  just.orange(template, length)
- -------------------------------
+ ------------------------------
 
  Create array of objects base on provided template
 
