@@ -21,7 +21,7 @@ just.rrange(`valuesRange`, `lengthRange`)
 ------------------------------
 
  Create array of random length withing given scope with random integer values withing given scope.
- Values of params can be number of array in other case default will be [0,10] for both params
+ Values of params can be number or array in other case default will be [0,10] for both params
 
 ### example
 
