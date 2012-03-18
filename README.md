@@ -1,7 +1,7 @@
 Collection of usefull JS function
 =================================
 
-* just.range(start, end, step)
+just.range(start, end, step)
 ------------------------------
  Create array containing arithmetic progressions.
  If the step argument is omitted, it defaults to 1. 
@@ -17,7 +17,7 @@ Collection of usefull JS function
  	[4,6,8,10,12,14]
 
 
- * just.rrange (valuesRange, lengthRange)
+ just.rrange (valuesRange, lengthRange)
  ----------------------------------------
 
  Create array of random length withing given scope with random integer values withing given scope.
@@ -33,7 +33,7 @@ Collection of usefull JS function
  eg. [12, 99, 29, 136, 71, 100]
 
 
- * just.orange(template, length)
+ just.orange(template, length)
  -------------------------------
 
  Create array of objects base on provided template
