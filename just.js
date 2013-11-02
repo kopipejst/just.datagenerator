@@ -1,5 +1,6 @@
 /**
  * Define namespace for just
+ * @author Ivan Lazarevic (workshop.rs)
  * @var just
  */
 var just = just || {};
@@ -16,39 +17,39 @@ var just = just || {};
  * @return array
  */
 just.range = function(start, end, step) {
-	
-	step	= step ? parseInt(step) : 1;
-	start 	= parseInt(start) || 0;
-	end 	= parseInt(end) || 0;
 
-	var range 	= [],
-		current	= start;
+    step = step ? parseInt(step) : 1;
+    start = parseInt(start) || 0;
+    end = parseInt(end) || 0;
 
-	if ( arguments.length == 1 ){
-		end 	= start;
-		start 	= 0;
-		current = 0;
-	}
+    var range = [],
+        current = start;
 
-	if (start <= end) {
-		if (step < 0) {
-			return range;
-		}
-		while ( current <= end ) {
-			range.push(current);
-			current += step;
-		}
-	} else {
-		if (step > 0) {
-			return range;
-		}			
-		while ( current > end ) {
-			range.push(current);
-			current += step;
-		}
-	}		
+    if (arguments.length == 1) {
+        end = start;
+        start = 0;
+        current = 0;
+    }
 
-	return range;
+    if (start <= end) {
+        if (step < 0) {
+            return range;
+        }
+        while (current <= end) {
+            range.push(current);
+            current += step;
+        }
+    } else {
+        if (step > 0) {
+            return range;
+        }
+        while (current > end) {
+            range.push(current);
+            current += step;
+        }
+    }
+
+    return range;
 };
 
 /**
@@ -62,22 +63,22 @@ just.range = function(start, end, step) {
  * @param array length
  * @return array
  */
-just.rrange = function(valuesRange, lengthRange){
-	
-	var valuesRangeDefault = !isNaN(valuesRange) ? [0, valuesRange] : [0,10];
-	var lengthRangeDefault = !isNaN(lengthRange) ? [0, lengthRange] : [0,10];
+just.rrange = function(valuesRange, lengthRange) {
 
-	valuesRange = valuesRange.constructor === Array ? valuesRange : valuesRangeDefault;
-	lengthRange = lengthRange.constructor === Array ? lengthRange : lengthRangeDefault;
+    var valuesRangeDefault = !isNaN(valuesRange) ? [0, valuesRange] : [0, 10];
+    var lengthRangeDefault = !isNaN(lengthRange) ? [0, lengthRange] : [0, 10];
 
-	var len = parseInt(lengthRange[0] + Math.random() * (lengthRange[1] - lengthRange[0])); // length of array
-	var range = [];
-	
-	for(var i=0; i < len; i++){
-		range.push( parseInt(valuesRange[0] + Math.random() * (valuesRange[1] - valuesRange[0])) );
-	}
+    valuesRange = valuesRange.constructor === Array ? valuesRange : valuesRangeDefault;
+    lengthRange = lengthRange.constructor === Array ? lengthRange : lengthRangeDefault;
 
-	return range;
+    var len = parseInt(lengthRange[0] + Math.random() * (lengthRange[1] - lengthRange[0])); // length of array
+    var range = [];
+
+    for (var i = 0; i < len; i++) {
+        range.push(parseInt(valuesRange[0] + Math.random() * (valuesRange[1] - valuesRange[0])));
+    }
+
+    return range;
 
 };
 
@@ -89,34 +90,34 @@ just.rrange = function(valuesRange, lengthRange){
  * @param integer length
  * @return array
  */
-just.orange = function(template, length){
-	var range = [];
+just.orange = function(template, length) {
+    var range = [];
 
-	length = parseInt(length) || 10;
+    length = parseInt(length) || 10;
 
-	for(var i=0; i<length; i++){
-		var temp = {};
-		for(var prop in template) {
-			if(template.hasOwnProperty(prop)){
-				var tempValue = template[prop];
-				/**
-				 * If element is array we'll take elements by order
-				 * in case that array have less elements than number of elements we want 
-				 * we'll use last one from array
-				 * @TODO in case that array have less elements it should be reset 
-				 */
-				if(tempValue.constructor === Array){
-					var position = i < tempValue.length - 1 ? i : tempValue.length - 1;
-					tempValue = tempValue[position];
-				}
+    for (var i = 0; i < length; i++) {
+        var temp = {};
+        for (var prop in template) {
+            if (template.hasOwnProperty(prop)) {
+                var tempValue = template[prop];
+                /**
+                 * If element is array we'll take elements by order
+                 * in case that array have less elements than number of elements we want 
+                 * we'll use last one from array
+                 * @TODO in case that array have less elements it should be reset 
+                 */
+                if (tempValue.constructor === Array) {
+                    var position = i < tempValue.length - 1 ? i : tempValue.length - 1;
+                    tempValue = tempValue[position];
+                }
 
-				temp[prop] = tempValue;
-			}
-		}
-		range.push(temp);
-	}
+                temp[prop] = tempValue;
+            }
+        }
+        range.push(temp);
+    }
 
-	return range;
+    return range;
 };
 
 /**
@@ -125,17 +126,20 @@ just.orange = function(template, length){
  * @param array arr
  * @return array
  */
-just.arrayShuffle = function(arr){
-	var i = arr.length;
-	if ( i == 0 ) return false;
-	while ( --i ) {
-		var j = Math.floor( Math.random() * ( i + 1 ) );
-		var tempi = arr[i];
-		var tempj = arr[j];
-		arr[i] = tempj;
-		arr[j] = tempi;
-	}
+just.arrayShuffle = function(arr) {
+    var i = arr.length;
+    if (i == 0) return false;
+    while (--i) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tempi = arr[i];
+        var tempj = arr[j];
+        arr[i] = tempj;
+        arr[j] = tempi;
+    }
 
-	return arr;
+    return arr;
 };
 
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = just.RandomColor;
+}
