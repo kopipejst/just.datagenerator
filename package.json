@@ -1,0 +1,19 @@
+{
+  "name": "just.datagenerator",
+  "version": "0.1.1",
+  "homepage": "http://workshop.rs/2012/04/just-javascript-useful-stuff/",
+  "keywords": [
+    "strings",
+    "keys",
+    "random",
+    "passwords"
+  ],
+  "description": "generate fake data ...",
+  "main": "just.datagenerator.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kopipejst/just.datagenerator.git"
+  },
+  "author": "Ivan Lazarevic",
+  "license": "MIT"
+}

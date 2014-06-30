@@ -4,16 +4,16 @@ Collection of useful JS functions
 just.range(`start`, `end`, `step`)
 ------------------------------
  Create array containing arithmetic progressions.
- If the step argument is omitted, it defaults to 1. 
- If the start argument is omitted, it defaults to 0. 
+ If the step argument is omitted, it defaults to 1.
+ If the start argument is omitted, it defaults to 0.
  In case of invalid argument empty array will be returned.
 
-### example 
- 
- 	just.range(4,15,2);
- 
-### returns 
- 
+### example
+
+ 	just.dataGenerator.range(4,15,2);
+
+### returns
+
  	[4,6,8,10,12,14]
 
 
@@ -25,9 +25,9 @@ just.rrange(`valuesRange`, `lengthRange`)
 
 ### example
 
- 	just.rrange([10, 150], [5,10]);
+ 	just.dataGenerator.rrange([10, 150], [5,10]);
 
-### returns 
+### returns
 
  array of 5-10 elements where each value is between 10-150
  eg. [12, 99, 29, 136, 71, 100]
@@ -45,7 +45,7 @@ just.orange(`template`, `length`)
 	 	name: ['ten ','one','two']
 	 }
 
-	just.orange(template, 3);
+	just.dataGenerator.orange(template, 3);
 
 ### returns
 
@@ -59,7 +59,7 @@ just.arrayShuffle(`arr`)
 
 ### example
 
-	just.arrayShuffle([5, 10, 12]);
+	just.dataGenerator.arrayShuffle([5, 10, 12]);
 
 ### returns
 
